@@ -1,0 +1,25 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Databases
+*.db
+*.sqlite3
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Firebase private keys
+serviceAccountKey.json
+
+# VSCode settings
+.vscode/
+
+# Temp audio files
+temp_audio_*.mp3

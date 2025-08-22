@@ -1,0 +1,30 @@
+/* ui_translator_style.css */
+
+/* Set Times New Roman globally */
+html, body, [class*="css"] {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Hover transition on expanders */
+.custom-expander:hover {
+    background-color: #f0f8ff;
+    transition: background-color 0.4s ease-in-out;
+    border-left: 4px solid #1e90ff;
+}
+
+/* Fade-in animation for translated messages */
+.translated-message {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Optional: button hover animation */
+button:hover {
+    background-color: #1e90ff !important;
+    color: white !important;
+    transition: background-color 0.3s ease-in-out;
+}

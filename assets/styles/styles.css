@@ -1,0 +1,49 @@
+/* Custom CSS for Streamlit app */
+[data-testid="stAppViewContainer"] {
+    /* background-image removed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Times New Roman", serif;
+    color: white;
+}
+
+/* Headings style */
+h1, h2, h3 {
+    color: #ffffff !important;
+    text-align: center;
+    font-family: "Times New Roman", serif;
+}
+
+.sub-heading {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: "Times New Roman", serif;
+}
+
+/* Style for text inputs and textarea */
+.stTextInput > div > div > input,
+.stTextArea > div > textarea {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-radius: 10px;
+    padding: 10px;
+    color: black !important;
+}
+
+/* Style for buttons */
+.stButton > button {
+    background-color: #45c258;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on buttons */
+.stButton > button:hover {
+    background-color: #2397b4;
+    cursor: pointer;
+}

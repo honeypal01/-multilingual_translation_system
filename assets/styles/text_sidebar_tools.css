@@ -1,0 +1,35 @@
+.sidebar-nav {
+    font-family: "Times New Roman", Times, serif;
+    padding: 10px;
+}
+
+.sidebar-nav h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.sidebar-nav a {
+    display: block;
+    background-color: #45c258;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease-in;
+}
+
+.sidebar-nav a:hover {
+    background-color: #d0e4ff;
+    color: #000;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
