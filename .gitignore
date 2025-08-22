@@ -23,3 +23,7 @@ serviceAccountKey.json
 
 # Temp audio files
 temp_audio_*.mp3
+
+.env
+firebase_config.json
+serviceAccountKey.json

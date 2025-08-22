@@ -5,9 +5,14 @@ from datetime import datetime
 from firebase_admin import firestore
 from urllib.parse import urlencode
 import requests
+import os
+from dotenv import load_dotenv
 
 # Patch for deprecated torch.classes
 sys.modules['torch.classes'] = types.SimpleNamespace()
+
+# ✅ Load environment variables
+load_dotenv()
 
 # ✅ Streamlit page config
 st.set_page_config(page_title="🌍 Multilingual Translator", layout="centered")
@@ -23,7 +28,7 @@ from firebase_auth_utils import (
 # === Google OAuth Helpers ===
 def get_google_auth_url():
     params = {
-        "client_id": st.secrets["GOOGLE_CLIENT_ID"],
+        "client_id": os.getenv("GOOGLE_CLIENT_ID"),
         "redirect_uri": "http://localhost:8501",
         "response_type": "code",
         "scope": "openid email profile",
@@ -35,8 +40,8 @@ def get_google_auth_url():
 def get_tokens(auth_code):
     data = {
         "code": auth_code,
-        "client_id": st.secrets["GOOGLE_CLIENT_ID"],
-        "client_secret": st.secrets["GOOGLE_CLIENT_SECRET"],
+        "client_id": os.getenv("GOOGLE_CLIENT_ID"),
+        "client_secret": os.getenv("GOOGLE_CLIENT_SECRET"),
         "redirect_uri": "http://localhost:8501",
         "grant_type": "authorization_code"
     }
